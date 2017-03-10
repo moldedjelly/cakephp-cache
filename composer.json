@@ -1,0 +1,30 @@
+{
+	"name": "moldedjelly/cakephp-cache",
+	"description": "Cache plugin for CakePHP",
+	"type": "cakephp-plugin",
+	"license": "MIT",
+	"require": {
+		"php": ">=5.5",
+		"cakephp/cakephp": "^3.3"
+	},
+	"require-dev": {
+		"dereuromark/cakephp-tools": "dev-master",
+		"fig-r/psr2r-sniffer": "dev-master",
+		"phpunit/phpunit": "*"
+	},
+	"autoload": {
+		"psr-4": {
+			"Cache\\": "src"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Cache\\Test\\": "tests",
+			"TestApp\\": "tests/TestApp/src"
+		}
+	},
+	"scripts": {
+		"cs-check": "phpcs -p --standard=vendor/fig-r/psr2r-sniffer/PSR2R/ruleset.xml --ignore=/cakephp-cache/vendor/,/tmp/,/logs/ --extensions=php ./",
+		"cs-fix": "phpcbf -f --standard=vendor/fig-r/psr2r-sniffer/PSR2R/ruleset.xml --ignore=/cakephp-cache/vendor/,/tmp/,/logs/ --extensions=php ./"
+	}
+}
