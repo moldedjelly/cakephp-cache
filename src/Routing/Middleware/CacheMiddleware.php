@@ -275,6 +275,12 @@ class CacheMiddleware {
 
 		$response = $response->withCache($modifiedTime, $cacheTime);
 		$response = $response->withType($cacheInfo['ext']);
+		
+		die($cacheInfo['ext']);
+		
+		if ($cacheInfo['ext'] == "css") {
+  		
+		}
 
 		if (Configure::read('debug') || $this->config('debug')) {
 			if ($cacheInfo['ext'] === 'html') {
