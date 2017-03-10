@@ -1,6 +1,7 @@
 {
 	"name": "moldedjelly/cakephp-cache",
 	"description": "Cache plugin for CakePHP",
+  "version": "dev-master",
 	"type": "cakephp-plugin",
 	"license": "MIT",
 	"require": {
