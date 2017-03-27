@@ -260,12 +260,12 @@ class CacheFilter extends DispatcherFilter {
 			$response->header('Content-Length', $size);
 		}
 
-		$createdTime = $cacheInfo['created'];
+		$modifiedTime = $cacheInfo['created'];
 		$cacheTime = $cacheInfo['expire'];
 		if (!$cacheTime) {
 			$cacheTime = $this->_cacheTime;
 		}
-		$response->cache($createdTime, $cacheTime);
+		$response->cache($modifiedTime, $cacheTime);
 		$response->type($cacheInfo['ext']);
 
 		if (Configure::read('debug') || $this->config('debug')) {
